@@ -3,7 +3,7 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { createNote, deleteNote } from './graphql/mutations';
 import { listNotes } from './graphql/queries';
 
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 import awsExports from './aws-exports';
 
 Amplify.configure(awsExports);
@@ -84,7 +84,7 @@ class App extends Component {
         <h1>Notes App</h1>
         <AddNote addNote={this.addNote} />
         <NotesList notes={this.state.notes} deleteNote={this.deleteNote} />
-        <AmplifySignOut />
+        
       </div>
     );
   }
