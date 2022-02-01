@@ -2,7 +2,6 @@ import { Component } from 'react';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { createNote, deleteNote } from './graphql/mutations';
 import { listNotes } from './graphql/queries';
-
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import awsExports from './aws-exports';
 
