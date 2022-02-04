@@ -2,8 +2,6 @@ import { Component } from 'react';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 import { createNote, deleteNote } from './graphql/mutations';
 import { listNotes } from './graphql/queries';
-
-import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import awsExports from './aws-exports';
 
 Amplify.configure(awsExports);
@@ -89,7 +87,7 @@ class App extends Component {
   }
 }
 
-export default withAuthenticator(App);
+export default App;
 
 const styles = {
   container: { width: 480, margin: '0 auto', padding: 20 },
